@@ -1,0 +1,26 @@
+html {
+    font-family: sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-image: url("../images/cinemabanner.png");
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 800px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+nav{
+    background-color:rgba(58, 94, 58, 0.952);
+}
+.nav-link{
+    font-size: large;
+    color: gainsboro;
+}
+.footer-credit{
+    background-color: rgb(69, 59, 75);
+    color: ivory;
+}

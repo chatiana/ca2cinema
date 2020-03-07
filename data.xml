@@ -1,0 +1,60 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Movies.xsl" ?>
+<Movies>
+    <Movie rating= "R">
+        <Title runtime="177">The Godfather</Title>
+        <Genre> Crime Drama </Genre>
+        <Director>
+            <Name>
+                <First>Francis Ford </First>
+                <Last>Coppola </Last>
+            </Name>
+        </Director>
+        <Studio>Paramount Pictures </Studio>
+        <Year>1972 </Year>
+        <startdate>2020-05-30T17:00:00</startdate>
+    </Movie>
+
+    <Movie rating= "R">
+        <Title runtime="128">Lalaland</Title>
+        <Genre> Crime Drama Musical Romance</Genre>
+        <Director>
+            <Name>
+                <First>Damien  </First>
+                <Last>Chazelle </Last>
+            </Name>
+        </Director>
+        <Studio>Summit Entertainment</Studio>
+        <Year>2016 </Year>
+        <startdate>2020-04-13T18:00:00</startdate>
+    </Movie>
+
+    <Movie rating= "R">
+        <Title runtime="117">Blade Runner</Title>
+        <Genre> Action Sci-Fi Thriller </Genre>
+        <Director>
+            <Name>
+                <First>Ridley </First>
+                <Last>Scott </Last>
+            </Name>
+        </Director>
+        <Studio>Warner Bros.</Studio>
+        <Year>1982 </Year>
+        <startdate>2020-05-02T18:00:00</startdate>
+    </Movie>
+
+    <Movie rating= "R">
+        <Title runtime="177">The Royal Tenenbaums</Title>
+        <Genre> Comedy Drama </Genre>
+        <Director>
+            <Name>
+                <First>Wes  </First>
+                <Last>Anderson </Last>
+            </Name>
+        </Director>
+        <Studio>Touchstone Pictures</Studio>
+        <Year>2002 </Year>
+        <startdate>2020-04-25T19:00:00</startdate>
+    </Movie>
+
+</Movies>
