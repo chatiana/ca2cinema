@@ -127,10 +127,11 @@
               </select>
            <br>  
               <select id="DAY" name="isbn" class="form-control">
+                <option selected>Choose a DAY...</option>
               </select>
               <br>
               <!--Will display the name of the film as per the day selected-->
-              <p class="pars" id="name_of_movie"></p>
+              <p class="pars" id="title_for_day"></p>
           </div>
 
 
@@ -258,7 +259,7 @@
             result = nodes.iterateNext();
         }
     }
-    document.getElementById("name_of_movie").innerHTML = txt;
+    document.getElementById("title_for_day").innerHTML = txt;
   }
   
   
