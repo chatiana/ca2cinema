@@ -247,7 +247,6 @@
     //Read Title after drowpdown selected
   function ReadTitleWithDay(xml , dayName, timeTime){
     var path = "/Movies/Movie[@DAY='$input_day']/title".replace('$input_day', dayName);
-    var path = "/Movies/Movie[@TIME='$input_time']/title".replace('$input_time', timeTime);
     var txt ="";
     if (xml.evaluate) {
         var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
@@ -259,7 +258,6 @@
         }
     }
     document.getElementById("title_for_day").innerHTML = txt;
-    document.getElementById("title_for_time").innerHTML = txt;
   }
   
  //Read file to populate dropdown
