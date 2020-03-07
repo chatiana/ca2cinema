@@ -75,7 +75,7 @@
 
     <section id="bookingLink">
 
-        <div class="row">
+      <div class="row">
             <div class="col-8">col-8
             <!-- carouseel-->
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -106,43 +106,34 @@
               </div>
             </div>
 
-            <div class="col-4">col-4
+      <div class="col-4">col-4
             
              <!--Booking Options-->
              <p class="h1">Book Now</p>
         <div class="form-group col-md-12">
 
-
             <select id="inputState" name="day" class="form-control">
               <option selected>Choose a MOVIE...</option>
               <option>...</option>
             </select>
-           
+            <br>
             <select id="DAY" name="day" class="form-control">
               <option selected>Choose a DAY...</option>
             </select>
             <br>
-
-            <br>
-              <select id="inputState" class="form-control">
+              <select id="TIME" name="time" class="form-control">
                 <option selected>Choose a TIME...</option>
                 <option>...</option>
               </select>
            <br>  
 
               <!--Will display the name of the film as per the day selected-->
-              
-              <p class="pars" id="title_for_day">test</p>
-              
+              <p class="pars" id="title_for_day"></p>
               
               <button type="button" class="btn btn-primary">Find Tickets</button>
           </div>
-
-
-                 
-
-             </div>
-            </div>
+      </div>
+    </div>
     </section>
          
 
@@ -237,22 +228,24 @@
         ReadFileForXmlForAttributeValue( this.value );
       });
   });
-  
-  function ReadFileForXmlForAttributeValue(dayName){
+
+  //Read XML file for Day drop down
+  function ReadFileForXmlForAttributeValue(dayName, timeTime){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status==200) {
           var parser = new DOMParser();
           xmlDoc = parser.parseFromString(xhttp.responseText,"text/xml");
-          ReadTitleWithDay(xmlDoc , dayName);
+          ReadTitleWithDay(xmlDoc , dayName, timeTime);
         }
     };
     xhttp.open("GET", "https://raw.githubusercontent.com/chatiana/ca2cinema/master/data.xml", true);
     xhttp.send();
   }
-  
-  function ReadTitleWithDay(xml , dayName){
+    //Read Title after drowpdown selected
+  function ReadTitleWithDay(xml , dayName, timeTime){
     var path = "/Movies/Movie[@DAY='$input_day']/title".replace('$input_day', dayName);
+    var path = "/Movies/Movie[@TIME='$input_time']/title".replace('$input_time', timeTime);
     var txt ="";
     if (xml.evaluate) {
         var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
@@ -264,9 +257,10 @@
         }
     }
     document.getElementById("title_for_day").innerHTML = txt;
+    document.getElementById("title_for_time").innerHTML = txt;
   }
   
-  
+ //Read file to populate dropdown
   function ReadFileForXml(){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -274,18 +268,16 @@
           var parser = new DOMParser();
           xmlDoc = parser.parseFromString(xhttp.responseText,"text/xml");
           createDropDown(xmlDoc);
-  
         }
     };
     xhttp.open("GET", "https://raw.githubusercontent.com/chatiana/ca2cinema/master/data.xml", true);
     xhttp.send();
   }
-  
+  //Create dropdown for Day
   function createDropDown(xml){
     var txt = "";
     path = "/Movies/Movie/@DAY";
     select = document.getElementById('DAY');
-  
   
     if (xml.evaluate) {
         var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
@@ -299,6 +291,25 @@
         }
     }
   }
+
+  function createDropDown(xml){
+    var txt = "";
+    path = "/Movies/Movie/@TIME";
+    select = document.getElementById('TIME');
+  
+    if (xml.evaluate) {
+        var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+        var result = nodes.iterateNext();
+        while (result) {
+            var opt = document.createElement('option');
+            opt.value = result.value;
+            opt.innerHTML = result.value;
+            select.appendChild(opt);
+            result = nodes.iterateNext();
+        }
+    }
+  }
+  
   
   
   </script>
