@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="Movies.xsl" ?>
 <Movies>
     <Movie genre= "Comedy Drama" DAY="Thrusday">
-        <Title runtime="177">The Royal Tenenbaums</Title>
+        <title runtime="177">The Royal Tenenbaums</title>
         <Director>
                 <First>Wes </First>
                 <Last>Anderson </Last>
@@ -13,7 +13,7 @@
     </Movie>
 
     <Movie genre= "Crime Drama" DAY="Friday">
-        <Title runtime="177">The Godfather</Title>
+        <title runtime="177">The Godfather</title>
         <Director>
                 <First>Francis Ford </First>
                 <Last>Coppola </Last>
@@ -24,7 +24,7 @@
     </Movie>
 
     <Movie genre= "Crime Drama Musical Romance" DAY="Saturday">
-        <Title runtime="128">Lalaland</Title>
+        <title runtime="128">Lalaland</title>
         <Director>
                 <First>Damien  </First>
                 <Last>Chazelle </Last>
@@ -35,7 +35,7 @@
     </Movie>
 
     <Movie genre= "Action Sci-Fi Thriller" DAY="Sunday">
-        <Title runtime="117">Blade Runner</Title>
+        <title runtime="117">Blade Runner</title>
         <Director>
                 <First>Ridley </First>
                 <Last>Scott </Last>
