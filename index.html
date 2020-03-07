@@ -126,11 +126,12 @@
                 <option>...</option>
               </select>
            <br>  
-              <select id="day" name="isbn" class="form-control">
+              <select id="DAY" name="isbn" class="form-control">
+                <option selected>Choose a DAY...</option>
               </select>
               <br>
-            
-              <p class="pars" id="name_of_day"></p>
+              <!--Will display the name of the film as per the day selected-->
+              <p class="pars" id="name_of_movie"></p>
           </div>
 
 
@@ -228,25 +229,25 @@
 
   $(document).ready(function() {
     ReadFileForXml ();
-    $('#day').change(function(){
+    $('#DAY').change(function(){
         ReadFileForXmlForAttributeValue( this.value );
       });
   });
   
-  function ReadFileForXmlForAttributeValue(isbnNumber){
+  function ReadFileForXmlForAttributeValue(dayName){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status==200) {
           var parser = new DOMParser();
           xmlDoc = parser.parseFromString(xhttp.responseText,"text/xml");
-          ReadTitleWithIsbn(xmlDoc , isbnNumber);
+          ReadTitleWithDay(xmlDoc , dayName);
         }
     };
     xhttp.open("GET", "https://raw.githubusercontent.com/chatiana/ca2cinema/master/data.xml", true);
     xhttp.send();
   }
   
-  function ReadTitleWithIsbn(xml , isbnNumber){
+  function ReadTitleWithDay(xml , dayName){
     var path = "/Movies/movie[@day='$input_day']/title".replace('$input_day', dayName);
     var txt ="";
     if (xml.evaluate) {
@@ -258,7 +259,7 @@
             result = nodes.iterateNext();
         }
     }
-    document.getElementById("name_of_day").innerHTML = txt;
+    document.getElementById("name_of_movie").innerHTML = txt;
   }
   
   
@@ -279,8 +280,8 @@
   
   function createDropDown(xml){
     var txt = "";
-    path = "/Movies/movie/@day";
-    select = document.getElementById('day');
+    path = "/Movies/movie/@DAY";
+    select = document.getElementById('DAY');
   
   
     if (xml.evaluate) {

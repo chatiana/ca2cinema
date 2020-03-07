@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="Movies.xsl" ?>
 <Movies>
-    <Movie genre= "Crime Drama" day="Friday">
+    <Movie genre= "Crime Drama" DAY="Friday">
         <Title runtime="177">The Godfather</Title>
         <Director>
                 <First>Francis Ford </First>
@@ -12,7 +12,7 @@
         <startdate>2020-05-30T17:00:00</startdate>
     </Movie>
 
-    <Movie genre= "Crime Drama Musical Romance" day="Saturday">
+    <Movie genre= "Crime Drama Musical Romance" DAY="Saturday">
         <Title runtime="128">Lalaland</Title>
         <Director>
                 <First>Damien  </First>
@@ -23,7 +23,7 @@
         <startdate>2020-04-13T18:00:00</startdate>
     </Movie>
 
-    <Movie genre= "Action Sci-Fi Thriller" day="Sunday">
+    <Movie genre= "Action Sci-Fi Thriller" DAY="Sunday">
         <Title runtime="117">Blade Runner</Title>
         <Director>
                 <First>Ridley </First>
@@ -34,7 +34,7 @@
         <startdate>2020-05-02T18:00:00</startdate>
     </Movie>
 
-    <Movie genre= "Comedy Drama" day="Thrusday">
+    <Movie genre= "Comedy Drama" DAY="Thrusday">
         <Title runtime="177">The Royal Tenenbaums</Title>
         <Director>
                 <First>Wes </First>
