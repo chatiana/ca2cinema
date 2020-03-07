@@ -20,9 +20,41 @@ nav{
     font-size: large;
     color: gainsboro;
 }
+
+.main-container{
+    margin: 10%;
+}
+#bookingLink{
+    background-color: rgb(50, 49, 51);
+}
 .footer-credit{
     background-color: rgb(69, 59, 75);
+    text-align: center;
     color: ivory;
+    padding: 10px;
+}
+.footer-container{
+padding: 5% 10%;
+background-color: rgb(108, 82, 109);
+}
+.footernav{
+    list-style: none;
+}
+.fab{
+    font-size:35px;
+    color: honeydew;
+}
+.fas {
+    font-size:35px;
+    color: honeydew;
+}
+.social-list{
+    list-style: none;
+}
+.social-list li{
+   color: honeydew;
+   display: inline;
+   padding: 5px;
 }
 .pars {
     color: black;
@@ -46,3 +78,4 @@ nav{
         border-radius: 4px;
         box-sizing: border-box;
     }
+

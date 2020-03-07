@@ -42,6 +42,9 @@
         </div>
     </header>
 
+
+    <div class="main-container">
+
     <section id="bookingLink">
 
       <div class="row">
@@ -121,10 +124,8 @@
 
         <p id="texthold">Pressing the button will change the content of the website dynamically and list all movie info</p>
         <br>
-        <button class="button" class="btn btn-primary" type="button" onclick="showMovieDetails()">Movie Info</button>
+        <button class="btn btn-primary" type="button" onclick="showMovieDetails()">Movie Info</button>
         <br>
-
-
 
     </div>
     </section>
@@ -168,56 +169,58 @@
           </form>
     </section>
 
+
+    </div>
+
 <!--Footer-->
 
-<footer>
+<footer class="footer-container">
     <div class="row">
-        <div class="col-sm">
-            <ul>
+        <div class="col-md">
+            <ul class="footernav">
             <li>About Us</li>
               <li>Movies</li>
               <li>Booking</li>
               <li>Contact Us</li>
           </ul>
         </div>
-        <div class="col-sm">News Letter
-            <p>Stay up to date with the new events.</p>
+        <div class="col-md">News Letter<br>
+            <p>Stay up to date with the new events.</p><br>
             <form>
                 <div class="form-group row">
-                  <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                </div>
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email"><br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
             </div>
             </form>
 
         </div>
 
 
-        <div class="col-sm">Social Media
-            <div class="col-sm">
-             <i class="fab fa-facebook-square"></i>
-             <i class="fab fa-twitter-square"></i>
-             <i class="fas fa-envelope-square"></i>
-             <i class="fab fa-instagram-square"></i>
-             <i class="fab fa-instagram"></i>
-             </div>
-         </div>
+        <div class="col-md">
+          <p class="follow">Social Media</p>
+         <ul class="social-list">
+          
+            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+            <li><a href="#"><i class="fas fa-envelope-square"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+  
+      </div>
 
       </div>
 
 
-    <div class="footer-credit">
-        <p>	Copyright &copy; 2020 | TatianaCM</p>
-    </div>
-    </footer>
 
+    </footer>
+    <div class="footer-credit">
+      <p>	Copyright &copy; 2020 | TatianaCM</p>
+  </div>
     
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>       
-
-
 
 
 <script src="js/myscript.js"> </script>
