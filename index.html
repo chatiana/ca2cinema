@@ -127,7 +127,6 @@
               </select>
            <br>  
               <select id="DAY" name="isbn" class="form-control">
-                <option selected>Choose a DAY...</option>
               </select>
               <br>
               <!--Will display the name of the film as per the day selected-->
@@ -280,7 +279,7 @@
   
   function createDropDown(xml){
     var txt = "";
-    path = "/Movies/movie/@DAY";
+    path = "/Movies/Movie/@DAY";
     select = document.getElementById('DAY');
   
   
