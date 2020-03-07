@@ -125,6 +125,12 @@
                 <option selected>Choose a time...</option>
                 <option>...</option>
               </select>
+           <br>  
+              <select id="day" name="isbn" class="form-control">
+              </select>
+              <br>
+            
+              <p class="pars" id="name_of_day"></p>
           </div>
 
 
@@ -214,6 +220,89 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>       
+
+
+
+
+<script>
+
+  $(document).ready(function() {
+    ReadFileForXml ();
+    $('#day').change(function(){
+        ReadFileForXmlForAttributeValue( this.value );
+      });
+  });
+  
+  function ReadFileForXmlForAttributeValue(isbnNumber){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status==200) {
+          var parser = new DOMParser();
+          xmlDoc = parser.parseFromString(xhttp.responseText,"text/xml");
+          ReadTitleWithIsbn(xmlDoc , isbnNumber);
+        }
+    };
+    xhttp.open("GET", "https://raw.githubusercontent.com/chatiana/ca2cinema/master/data.xml", true);
+    xhttp.send();
+  }
+  
+  function ReadTitleWithIsbn(xml , isbnNumber){
+    var path = "/Movies/movie[@day='$input_day']/title".replace('$input_day', dayName);
+    var txt ="";
+    if (xml.evaluate) {
+        var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+        var result = nodes.iterateNext();
+        while (result) {
+          txt += result.childNodes[0].nodeValue
+          result = nodes.iterateNext();
+            result = nodes.iterateNext();
+        }
+    }
+    document.getElementById("name_of_day").innerHTML = txt;
+  }
+  
+  
+  function ReadFileForXml(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status==200) {
+          var parser = new DOMParser();
+          xmlDoc = parser.parseFromString(xhttp.responseText,"text/xml");
+          createDropDown(xmlDoc);
+  
+        }
+    };
+    xhttp.open("GET", "https://raw.githubusercontent.com/chatiana/ca2cinema/master/data.xml", true);
+    xhttp.send();
+  
+  }
+  
+  function createDropDown(xml){
+    var txt = "";
+    path = "/Movies/movie/@day";
+    select = document.getElementById('day');
+  
+  
+    if (xml.evaluate) {
+        var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+        var result = nodes.iterateNext();
+        while (result) {
+            var opt = document.createElement('option');
+            opt.value = result.value;
+            opt.innerHTML = result.value;
+            select.appendChild(opt);
+  
+            result = nodes.iterateNext();
+        }
+    }
+  
+  }
+  
+  
+  </script>
+
+
+
 </body>
 
 </html>
