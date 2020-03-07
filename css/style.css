@@ -24,3 +24,11 @@ nav{
     background-color: rgb(69, 59, 75);
     color: ivory;
 }
+.pars {
+    color: green;
+    font-size: 15px;
+    padding: 12px;
+    background-color: rgba(000, 0, 0, 0.7);
+    width: 70%;
+    display: inline-block;
+    }
