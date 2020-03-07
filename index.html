@@ -119,14 +119,9 @@
             </select>
             <br>
             <select id="DAY" name="day" class="form-control">
-              <option selected>Choose a DAY...</option>
+              <option selected>Choose a DAY & TIME...</option>
             </select>
             <br>
-              <select id="TIME" name="time" class="form-control">
-                <option selected>Choose a TIME...</option>
-                <option>...</option>
-              </select>
-           <br>  
 
               <!--Will display the name of the film as per the day selected-->
               <p class="pars" id="title_for_day"></p>
@@ -238,14 +233,14 @@
         if (this.readyState == 4 && this.status==200) {
           var parser = new DOMParser();
           xmlDoc = parser.parseFromString(xhttp.responseText,"text/xml");
-          ReadTitleWithDay(xmlDoc , dayName, timeTime);
+          ReadTitleWithDay(xmlDoc , dayName);
         }
     };
     xhttp.open("GET", "https://raw.githubusercontent.com/chatiana/ca2cinema/master/data.xml", true);
     xhttp.send();
   }
     //Read Title after drowpdown selected
-  function ReadTitleWithDay(xml , dayName, timeTime){
+  function ReadTitleWithDay(xml , dayName){
     var path = "/Movies/Movie[@DAY='$input_day']/title".replace('$input_day', dayName);
     var txt ="";
     if (xml.evaluate) {
@@ -291,25 +286,6 @@
         }
     }
   }
-
-  function createDropDown2(xml){
-    var txt = "";
-    path = "/Movies/Movie/@TIME";
-    select = document.getElementById('TIME');
-  
-    if (xml.evaluate) {
-        var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
-        var result = nodes.iterateNext();
-        while (result) {
-            var opt = document.createElement('option');
-            opt.value = result.value;
-            opt.innerHTML = result.value;
-            select.appendChild(opt);
-            result = nodes.iterateNext();
-        }
-    }
-  }
-  
   
   
   </script>
