@@ -51,12 +51,16 @@
         <p>Enter the movie number for movie Details</p>
 
         <ol>
-            <li>option 1</li>
-            <li>option 2</li>
-            <li>option 3</li>
-            <li>option 4</li>
+            <li>Lalaland</li>
+            <li>The Godfather</li>
+            <li>The Royal Tenenmaunts</li>
+            <li>Blade Runner</li>
         </ol>
 
+        <div class="form-group">
+          <label for="formGroupExampleInput"></label>
+          <input type="text" class="form-control" id="movieNum" placeholder="Input Number">
+      </div>
 
         <p id="texthold">Pressing the button will change the content of the website dynamically and list all movie info</p>
         <br>
@@ -64,10 +68,7 @@
         <br>
 
 
-        <div class="form-group">
-            <label for="formGroupExampleInput"></label>
-            <input type="text" class="form-control" id="movieNum" placeholder="Input Number">
-        </div>
+
     </div>
     </section>
 
@@ -112,7 +113,7 @@
              <p class="h1">Book Now</p>
         <div class="form-group col-md-12">
 
-            <select id="inputState" name="day" class="form-control">
+            <select id="inputState" name="movie" class="form-control">
               <option selected>Choose a MOVIE...</option>
               <option>...</option>
             </select>
@@ -129,6 +130,7 @@
 
               <!--Will display the name of the film as per the day selected-->
               <p class="pars" id="title_for_day"></p>
+              <p class="pars" id="title_for_time"></p>
               
               <button type="button" class="btn btn-primary">Find Tickets</button>
           </div>
