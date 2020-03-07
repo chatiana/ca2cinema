@@ -25,10 +25,9 @@ nav{
     color: ivory;
 }
 .pars {
-    color: green;
+    color: black;
     font-size: 15px;
     padding: 12px;
-    background-color: rgba(000, 0, 0, 0.7);
     width: 100%;
     display: inline-block;
     }
