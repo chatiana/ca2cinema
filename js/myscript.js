@@ -66,3 +66,58 @@
     }
     document.getElementById("title_for_day").innerHTML = txt;
   }
+
+//-----------------------CONTACT US - VALIDATIONS  --------------------------
+ 
+  function funcValidateFields(){
+
+ //Javascript Validation of EMAIL --------------------------
+      var text =document.getElementById("email1").value;
+      var regx = /^([a-z 0-9\.-]+)@([a-z 0-9]+).([a-z]{2,8})(.[a-z]{2,8})$/;
+      if(regx.test(text)){
+          document.getElementById("lbltext").innerHTML="Valid";
+          document.getElementById("lbltext").style.visibility="visible";
+          document.getElementById("lbltext").style.color="green";
+      }
+      else{
+        document.getElementById("lbltext").innerHTML="Invalid";
+        document.getElementById("lbltext").style.visibility="visible";
+        document.getElementById("lbltext").style.color="red";
+      }
+//Javascript Validation of Message empty field --------------------------
+      var x, text;
+      x = document.getElementById("messagearea").value;
+      if (isNaN(x)==''){
+        document.getElementById("messageEmpty").innerHTML="Please enter a message";
+        document.getElementById("messageEmpty").style.color="red";
+      }else{
+        document.getElementById("messageEmpty").style.visibility="hidden";
+      }
+
+//Javascript Validation of Name empty field --------------------------
+      var x, text;
+      x = document.getElementById("name1").value;
+      if (isNaN(x)==''){
+        document.getElementById("nameEmpty").innerHTML="Please enter a name";
+        document.getElementById("nameEmpty").style.color="red";
+      }else{
+        document.getElementById("nameEmpty").style.visibility="hidden";
+      }
+  }
+
+//Javascript Validation of input - Calculation --------------------------
+  function myCalcFunction() {
+    var x, text;
+
+    // Get the value of the input field with id="result"
+    x = document.getElementById("result").value;
+  
+    // If x is Not a Number or less than five or greater than 10
+    if (isNaN(x) ||  x < 5 || x > 10) {
+      text = "Input not valid";
+    } else {
+      text = "Input OK";
+    }
+    document.getElementById("robotmessage").innerHTML = text;
+  }
+

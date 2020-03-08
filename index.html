@@ -144,28 +144,37 @@
     <section id="contactLink">
         <p class="h1">Contact Us</p>
 
-        <form>
+        <form name="contactForm">
+          <!--Validation of NAME input --->
             <div class="form-group">
-                <label for="formGroupExampleInput">Full Name</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ex. John Smith">
-            </div>
+                <label for="formGroupExampleInput">Name</label>
+                <input type="text" class="form-control" id="name1" placeholder="ex. John Smith">
+                <p id="nameEmpty" ></p>
+              </div>
+            <!--Validation of EMAIL --->
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              <input type="email" class="form-control" id="email1"  placeholder="Enter email">
+            <p id="lbltext" ></p>
             </div>
 
+            <!--Validation of Not empty message --->
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Message</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
+                <textarea class="form-control" id="messagearea" rows="3" placeholder="Enter message"></textarea>
+                <p id="messageEmpty" syle="color:red"></p>
+              </div>
 
+            <!--Validation of SMART input --->
             <div class="form-group">
-                <label for="formGroupExampleInput">5+6</label>
-                <input type="text" class="form-control" id="humanornot" placeholder="Example input">
+                <label for="formGroupExampleInput">Please input a number between 5 and 10</label>
+                <input type="text" class="form-control" id="result" placeholder="Enter number and press 'Submit Answer'">
+                <button type="button" onclick="myCalcFunction()">Submit Answer</button>
+                <p id="robotmessage"></p>
             </div>
+            <br>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" onclick="funcValidateFields()">Submit</button>
           </form>
     </section>
 
