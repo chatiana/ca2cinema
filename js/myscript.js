@@ -106,14 +106,14 @@ function showMovieDetails(){
             txt += result.value + "<br>";
             result = nodes.iterateNext();
         }
-    // Code For Internet Explorer
     }
     document.getElementById("movie_genre").innerHTML = txt;
 
 
   }
 //Jquery mouseover out
-
+function changeImage() {
+    document.getElementById("imagemov").style.outlineColor = "#00ff00";
   
 //-----------------------CONTACT US - VALIDATIONS  --------------------------
 
