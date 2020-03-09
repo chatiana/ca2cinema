@@ -1,0 +1,40 @@
+      
+      <section id="contactLink">
+        <p class="h1">Contact Us</p>
+        
+        <form name="contactForm">
+          <!--Validation of NAME input --->
+            <div class="form-group">
+                <label for="formGroupExampleInput">Name</label>
+                <input type="text" class="form-control" id="name1" placeholder="ex. John Smith">
+                <p id="nameEmpty" ></p>
+              </div>
+            <!--Validation of EMAIL --->
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="email1"  placeholder="Enter email">
+            <p id="lbltext" ></p>
+            </div>
+
+            <!--Validation of Not empty message --->
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Message</label>
+                <textarea class="form-control" id="messagearea" rows="3" placeholder="Enter message"></textarea>
+                <p id="messageEmpty" syle="color:red"></p>
+              </div>
+
+            <!--Validation of SMART input --->
+            <div class="form-group">
+                <label for="formGroupExampleInput">Please input a number between 5 and 10</label>
+                <input type="text" class="form-control" id="result" placeholder="Enter number and press 'Submit Answer'">
+                <button type="button" onclick="myCalcFunction()">Submit Answer</button>
+                <p id="robotmessage"></p>
+            </div>
+            <br>
+
+            <button type="submit" class="btn btn-primary" onclick="funcValidateFields()">Submit</button>
+          </form>
+
+
+
+        </section>

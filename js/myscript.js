@@ -67,19 +67,54 @@
     document.getElementById("title_for_day").innerHTML = txt;
   }
 //------------------------MOVIES -INFO Display from XML ----------------
-function dosomethingNice(){
-    var xhttp = new XMLHttpRequest
+
+function showMovieDetails(){
+    var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status==200) {
-
-            showResult(xhttp.responseText);
+          var parser = new DOMParser();
+          xmlDoc = parser.parseFromString(xhttp.responseText,"text/xml");
+          showResult(xhttp.responseText);
         }
     };
     xhttp.open("GET", "https://raw.githubusercontent.com/chatiana/ca2cinema/master/data.xml", true);
     xhttp.send();
+  }
 
-}
+  function showResult(xml) {
 
+    //show movie title
+    var txt = "";
+    path = "/Movies/Movie/title[1]";
+    if (xml.evaluate) {
+        var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+        var result = nodes.iterateNext();
+        while (result) {
+            txt += result.childNodes[0].nodeValue + "<br>";
+            result = nodes.iterateNext();
+        }
+    } 
+    document.getElementById("movie_title").innerHTML = txt;
+
+    //show movie genre
+    var txt = "";
+    path = "/Movies/Movie/@genre";
+    if (xml.evaluate) {
+        var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+        var result = nodes.iterateNext();
+        while (result) {
+            txt += result.value + "<br>";
+            result = nodes.iterateNext();
+        }
+    // Code For Internet Explorer
+    }
+    document.getElementById("movie_genre").innerHTML = txt;
+
+
+  }
+//Jquery mouseover out
+
+  
 //-----------------------CONTACT US - VALIDATIONS  --------------------------
 
 
@@ -96,27 +131,29 @@ function validate(){
     
     var text;
     if(name.length < 5){
-      text = "Please Enter valid Name";
+      text = "Please Enter valid Name (Min: 5 characters)";
       error_message.innerHTML = text;
       return false;
     }
     if(subject.length < 10){
-      text = "Please Enter Correct Subject";
+      text = "Please Enter Correct Subject (Min: 10 characters)";
       error_message.innerHTML = text;
       return false;
     }
+    //if the input is not a number and has less or more than 10 digits
     if(isNaN(phone) || phone.length != 10){
-      text = "Please Enter valid Phone Number";
+      text = "Please Enter valid Phone Number (10 digits)";
       error_message.innerHTML = text;
       return false;
     }
+     //if @ is not pressent will return error and has a min length of 6
     if(email.indexOf("@") == -1 || email.length < 6){
       text = "Please Enter valid Email";
       error_message.innerHTML = text;
       return false;
     }
     if(message.length <= 80){
-      text = "Please Enter More Than 80 Characters";
+      text = "Please Enter a message of more than 80 characters";
       error_message.innerHTML = text;
       return false;
     }
@@ -145,31 +182,10 @@ function validate(){
         document.getElementById("lbltext").style.visibility="visible";
         document.getElementById("lbltext").style.color="red";
       }
-//Javascript Validation of Message empty field --------------------------
-      var x, text;
-      x = document.getElementById("messagearea").value;
-      if (isNaN(x)==''){
-        document.getElementById("messageEmpty").innerHTML="Please enter a message";
-        document.getElementById("messageEmpty").style.color="red";
-      }else{
-        document.getElementById("messageEmpty").style.visibility="hidden";
-      }
-
-//Javascript Validation of Name empty field --------------------------
-      var x, text;
-      x = document.getElementById("name1").value;
-      if (isNaN(x)==''){
-        document.getElementById("nameEmpty").innerHTML="Please enter a name";
-        document.getElementById("nameEmpty").style.color="red";
-      }else{
-        document.getElementById("nameEmpty").style.visibility="hidden";
-      }
-  }
 */
 
+//--------Javascript Validation of input - Calculation --------------------------
 
-
-//Javascript Validation of input - Calculation --------------------------
   function myCalcFunction() {
     var x, text;
 

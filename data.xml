@@ -1,5 +1,4 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="Movies.xsl" ?>
 <Movies>
     <Movie genre= "Comedy Drama" DAY="Thrusday @ 18:00" >
         <title runtime="177">The Royal Tenenbaums</title>

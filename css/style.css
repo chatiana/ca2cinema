@@ -5,6 +5,9 @@ body{
     margin: 0;
     padding: 0;
 }
+#DAY{
+    margin-top: 35px;
+}
 header{
     background-image: url("../images/cinemabanner.png");
     background-color: #cccccc; /* Used if the image is unavailable */
@@ -40,7 +43,11 @@ color: rgb(224, 168, 11);
 .movieInfoSec{
     background-color: black;
     color: white;
-    border:1px pink solid;
+    border:1px pink solid 1px;
+}
+.movietexthold{
+    color: red;
+    background-color: khaki;
 }
 /*Contact style*/
 
@@ -178,8 +185,8 @@ margin-left: auto;
 }
 .pars {
     color: black;
-    font-size: 15px;
-    padding: 12px;
+    font-size: 25px;
+    padding-top: 12px;
     width: 100%;
     display: inline-block;
     }
@@ -199,3 +206,9 @@ margin-left: auto;
         box-sizing: border-box;
     }
 
+    .pars2{
+        color: greenyellow;
+        font-size: 15px;
+        padding: 12px;
+        width: 70%;
+        }
