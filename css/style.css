@@ -33,8 +33,15 @@ color: rgb(224, 168, 11);
 #booknow{
     margin-top: 20px;
 }
-/*Contact style*/
-
+/*movies style*/
+.moviesection{
+    margin-top: 10%;
+}
+.movieInfoSec{
+    background-color: black;
+    color: white;
+    border:1px pink solid;
+}
 /*Contact style*/
 
 /*Contact style*/
@@ -42,7 +49,6 @@ color: rgb(224, 168, 11);
     display: flex;
     justify-content: center;
     margin-top: 10%;
-    ;
 }
 .wrapper{
     width: 50%;

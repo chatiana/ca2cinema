@@ -66,6 +66,19 @@
     }
     document.getElementById("title_for_day").innerHTML = txt;
   }
+//------------------------MOVIES -INFO Display from XML ----------------
+function dosomethingNice(){
+    var xhttp = new XMLHttpRequest
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status==200) {
+
+            showResult(xhttp.responseText);
+        }
+    };
+    xhttp.open("GET", "https://raw.githubusercontent.com/chatiana/ca2cinema/master/data.xml", true);
+    xhttp.send();
+
+}
 
 //-----------------------CONTACT US - VALIDATIONS  --------------------------
 

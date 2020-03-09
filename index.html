@@ -104,29 +104,52 @@
     
     
 <!--FILMS-->
-    <section id="moviesLink">
+    <section class="moviesection" id="moviesLink">
         <div id="main1">
-        <p class="h1" >Movies</p>
-        <p>Movies showing at the moment.</p>
-        <p>Enter the movie number for movie Details</p>
+          <p class="h1" >Movies</p>
+          <p>Movies showing at the moment.</p>
+          <div class="thumbnailMovies row">
+            <div class="col">
+              <img src="images/blade_pic.jpeg"/><button class="btn btn-outline-primary" type="button" onclick="showMovieDetails()">Movie Info</button>
+            </div>
+            <div class="col">
+              <img src="images/jojo_pic.jpeg"/><button class="btn btn-outline-primary" type="button" onclick="showMovieDetails()">Movie Info</button>
+            </div>
+            <div class="col">
+              <img src="images/royal_pic.jpeg"/><button class="btn btn-outline-primary" type="button" onclick="showMovieDetails()">Movie Info</button>
+            </div>
+            <div class="col">
+              <img src="images/lalaland_pic.jpeg"/><button class="btn btn-outline-primary" type="button" onclick="showMovieDetails()">Movie Info</button>
+            </div>
+            <div class="col">
+              <img src="images/joker_pic.jpeg"/><button class="btn btn-outline-primary" type="button" onclick="showMovieDetails()">Movie Info</button>
+            </div>
+            <div class="col">
+              <img src="images/moana_pic.jpeg"/><button class="btn btn-outline-primary" type="button" onclick="showMovieDetails()">Movie Info</button>
+            </div>
+            <div class="col">
+              <img src="images/stars_pic.jpeg"/><button class="btn btn-outline-primary" type="button"onclick="showMovieDetails()" >Movie Info</button>
+            </div>
+            <div class="col">
+              <img src="images/lighthouse_pic.jpeg"/><button class="btn btn-outline-primary" type="button" onclick="showMovieDetails()" >Movie Info</button>
+            </div>
+          </div>
 
-        <ol>
-            <li>Lalaland</li>
-            <li>The Godfather</li>
-            <li>The Royal Tenenmaunts</li>
-            <li>Blade Runner</li>
-        </ol>
+          <p>Click on the film for more details</p>
 
-        <div class="form-group">
-          <label for="formGroupExampleInput"></label>
-          <input type="text" class="form-control" id="movieNum" placeholder="Input Number">
-      </div>
-
-        <p id="texthold">Pressing the button will change the content of the website dynamically and list all movie info</p>
-        <br>
-        <button class="btn btn-primary" type="button" onclick="showMovieDetails()">Movie Info</button>
-        <br>
-
+          <div class="movieInfoSec">
+              <p id="movietexthold">Pressing the button will change the content of the website dynamically and list all movie info</p>
+              
+              
+              <p class="pars" id="movie_title"></p><br>
+              <p class="pars" id="movie_genre"></p><br>
+              <p class="pars" id="movie_length"></p><br>
+              <p class="pars" id="movie_director"></p><br>
+              <p class="pars" id="movie_year"></p><br>
+              <p class="pars" id="movie_studio"></p><br>
+              <p class="pars" id="movie_synopsis"></p><br>
+              <br>
+          </div>
     </div>
     </section>
 
