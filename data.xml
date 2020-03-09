@@ -3,58 +3,63 @@
 <Movies>
     <Movie genre= "Comedy Drama" DAY="Thrusday @ 18:00" >
         <title runtime="177">The Royal Tenenbaums</title>
+        <length>112 Min</length>
         <Director>
                 <First>Wes </First>
                 <Last>Anderson </Last>
         </Director>
         <Studio>Touchstone Pictures</Studio>
         <Year>2002 </Year>
-        <startdate>2020-04-25T19:00:00</startdate>
+        <synopsis></synopsis>
     </Movie>
 
     <Movie genre= "Crime Drama" DAY="Friday @ 16:00" >
         <title runtime="177">The Godfather</title>
+        <length>128 Min</length>
         <Director>
                 <First>Francis Ford </First>
                 <Last>Coppola </Last>
         </Director>
         <Studio>Paramount Pictures </Studio>
         <Year>1972 </Year>
-        <startdate>2020-05-30T17:00:00</startdate>
+        <synopsis>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </synopsis>
     </Movie>
 
 
     <Movie genre= "Crime Drama" DAY="Friday @ 20:00" >
         <title runtime="177">Star Wars</title>
+        <length>176 Min</length>
         <Director>
                 <First>Francis Ford </First>
                 <Last>Coppola </Last>
         </Director>
         <Studio>Paramount Pictures </Studio>
         <Year>1972 </Year>
-        <startdate>2020-05-30T17:00:00</startdate>
+        <synopsis>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </synopsis>
     </Movie>
 
     <Movie genre= "Crime Drama Musical Romance" DAY="Saturday @ 18:00" >
         <title runtime="128">Lalaland</title>
+        <length>190 Min</length>
         <Director>
                 <First>Damien  </First>
                 <Last>Chazelle </Last>
         </Director>
         <Studio>Summit Entertainment</Studio>
         <Year>2016 </Year>
-        <startdate>2020-04-13T18:00:00</startdate>
+        <synopsis>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </synopsis>
     </Movie>
 
     <Movie genre= "Action Sci-Fi Thriller" DAY="Sunday @ 19:00" >
         <title runtime="117">Blade Runner</title>
+        <length>90 Min</length>
         <Director>
                 <First>Ridley </First>
                 <Last>Scott </Last>
         </Director>
         <Studio>Warner Bros.</Studio>
         <Year>1982 </Year>
-        <startdate>2020-05-02T18:00:00</startdate>
+        <synopsis>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </synopsis>
     </Movie>
 
 </Movies>

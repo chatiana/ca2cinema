@@ -68,8 +68,56 @@
   }
 
 //-----------------------CONTACT US - VALIDATIONS  --------------------------
- 
-  function funcValidateFields(){
+
+
+//function funcValidateFields(){
+function validate(){
+    var name = document.getElementById("name").value;
+    var subject = document.getElementById("subject").value;
+    var phone = document.getElementById("phone").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    var error_message = document.getElementById("error_message");
+    
+    error_message.style.padding = "10px";
+    
+    var text;
+    if(name.length < 5){
+      text = "Please Enter valid Name";
+      error_message.innerHTML = text;
+      return false;
+    }
+    if(subject.length < 10){
+      text = "Please Enter Correct Subject";
+      error_message.innerHTML = text;
+      return false;
+    }
+    if(isNaN(phone) || phone.length != 10){
+      text = "Please Enter valid Phone Number";
+      error_message.innerHTML = text;
+      return false;
+    }
+    if(email.indexOf("@") == -1 || email.length < 6){
+      text = "Please Enter valid Email";
+      error_message.innerHTML = text;
+      return false;
+    }
+    if(message.length <= 80){
+      text = "Please Enter More Than 80 Characters";
+      error_message.innerHTML = text;
+      return false;
+    }
+
+    alert("Form Submitted Successfully!");
+    return true;
+  }
+
+
+
+
+
+
+  /*function funcValidateFields(){
 
  //Javascript Validation of EMAIL --------------------------
       var text =document.getElementById("email1").value;
@@ -104,6 +152,9 @@
         document.getElementById("nameEmpty").style.visibility="hidden";
       }
   }
+*/
+
+
 
 //Javascript Validation of input - Calculation --------------------------
   function myCalcFunction() {
@@ -121,3 +172,20 @@
     document.getElementById("robotmessage").innerHTML = text;
   }
 
+//-----------------------FOOTER - VALIDATIONS - NEWSLETTER EMAIL --------------------------
+ 
+function funcValidateNewsLetter(){
+    //Javascript Validation of EMAIL --------------------------
+         var text =document.getElementById("email2").value;
+         var regx = /^([a-z 0-9\.-]+)@([a-z 0-9]+).([a-z]{2,8})(.[a-z]{2,8})$/;
+         if(regx.test(text)){
+             document.getElementById("lbltext2").innerHTML="Valid";
+             document.getElementById("lbltext2").style.visibility="visible";
+             document.getElementById("lbltext2").style.color="green";
+         }
+         else{
+           document.getElementById("lbltext2").innerHTML="Invalid";
+           document.getElementById("lbltext2").style.visibility="visible";
+           document.getElementById("lbltext2").style.color="red";
+         }
+        }

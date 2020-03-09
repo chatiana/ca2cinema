@@ -48,7 +48,7 @@
     <section id="bookingLink">
 
       <div class="row">
-            <div class="col-8">col-8
+            <div class="col-8">
             <!-- carouseel-->
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -78,10 +78,10 @@
               </div>
             </div>
 
-      <div class="col-4">col-4
+      <div class="col-4">
             
              <!--Booking Options-->
-             <p class="h1">Book Now</p>
+             <p id="booknow" class="h1">Book Now</p>
         <div class="form-group col-md-12">
 
             <select id="inputState" name="movie" class="form-control">
@@ -141,41 +141,43 @@
     </section>
         
 <!--Contact Us-->
-    <section id="contactLink">
-        <p class="h1">Contact Us</p>
+   
+    <section class="contact" id="contactLink">
 
-        <form name="contactForm">
-          <!--Validation of NAME input --->
-            <div class="form-group">
-                <label for="formGroupExampleInput">Name</label>
-                <input type="text" class="form-control" id="name1" placeholder="ex. John Smith">
-                <p id="nameEmpty" ></p>
-              </div>
-            <!--Validation of EMAIL --->
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="email1"  placeholder="Enter email">
-            <p id="lbltext" ></p>
+        <div class="wrapper">
+          <h2>Contact us</h2>
+          <div id="error_message">
+             
+          </div>
+          <form action="" id="myform" onsubmit = "return validate();">
+            <div class="input_field">
+                <input type="text" placeholder="Name" id="name">
             </div>
-
-            <!--Validation of Not empty message --->
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Message</label>
-                <textarea class="form-control" id="messagearea" rows="3" placeholder="Enter message"></textarea>
-                <p id="messageEmpty" syle="color:red"></p>
-              </div>
-
-            <!--Validation of SMART input --->
-            <div class="form-group">
-                <label for="formGroupExampleInput">Please input a number between 5 and 10</label>
-                <input type="text" class="form-control" id="result" placeholder="Enter number and press 'Submit Answer'">
-                <button type="button" onclick="myCalcFunction()">Submit Answer</button>
-                <p id="robotmessage"></p>
+            <div class="input_field">
+                <input type="text" placeholder="Subject" id="subject">
             </div>
-            <br>
+            <div class="input_field">
+                <input type="text" placeholder="Phone" id="phone">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Email" id="email">
+            </div>
+            <div class="input_field">
+                <textarea placeholder="Message" id="message"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Please input a number between 5 and 10</label>
+              <input type="text" class="form-control" id="result" placeholder="Enter number and press 'Submit Answer'">
+              <button type="button" onclick="myCalcFunction()">Submit Answer</button>
+              <p id="robotmessage"></p>
+          </div>
 
-            <button type="submit" class="btn btn-primary" onclick="funcValidateFields()">Submit</button>
+            <div class="btn">
+                <button input class="btn btn-primary" type="submit">Submit</button>
+            </div>
+            
           </form>
+        </div>
     </section>
 
 
@@ -184,31 +186,36 @@
 <!--Footer-->
 
 <footer class="footer-container">
+
     <div class="row">
-        <div class="col-md">
+
+      <div class="col-md footerimg">
+        <img  src="images/phoenix_park_logo.png"/>
+      </div>
+
+        <div class="col-md"> NAVIGATION<br>
             <ul class="footernav">
-            <li>About Us</li>
-              <li>Movies</li>
-              <li>Booking</li>
-              <li>Contact Us</li>
+              <li class="footer-nav-item"><a href="#aboutLink">About Us</a></li>
+              <li class="footer-nav-item"><a href="#moviesLink">Movies</a></li>
+              <li class="footer-nav-item"><a href="#bookingLink">Booking</a></li>
+              <li class="footer-nav-item"><a href="#contactLink">Contact Us</a></li>
           </ul>
         </div>
-        <div class="col-md">News Letter<br>
-            <p>Stay up to date with the new events.</p><br>
+        <div class="col-md">NEWS LETTER<br>
             <form>
-                <div class="form-group row">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email"><br>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+              
+                <div class="form-group">
+                  <br>
+                  <p class="newslettertext">Stay up to date with the new events.</p>
+                    <input type="email" class="form-control" id="email2" placeholder="Enter email"><br>
+                    <p id="lbltext2"></p>
+                    <button type="submit" class="btn btn-primary" onclick="funcValidateNewsLetter()">Submit</button>
+                </div>
             </form>
-
         </div>
-
-
-        <div class="col-md">
-          <p class="follow">Social Media</p>
-         <ul class="social-list">
+        <div class="col-md"> SOCIAL MEDIA
           
+         <ul class="social-list">
             <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
             <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
             <li><a href="#"><i class="fas fa-envelope-square"></i></a></li>
