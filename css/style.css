@@ -49,6 +49,29 @@ color: rgb(224, 168, 11);
     color: red;
     background-color: khaki;
 }
+.col .imagcontain{
+    padding:10px;
+}
+.hoverdiv{
+    position: absolute;
+    margin-left: 15px;
+    margin-right: 15px;
+    display:none;
+    width: 76%;
+    height: 68%;
+    top: 3px;
+    left: 0px;
+    text-align: center;
+    font-size: 12px;
+    color:#fece0c;
+    background-color: black;
+ }
+.imgcontain img{
+    width: 100%;;
+}
+.btn-outline-primary{
+    width: 100%;
+}
 /*Contact style*/
 
 /*Contact style*/

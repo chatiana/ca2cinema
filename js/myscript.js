@@ -111,10 +111,15 @@ function showMovieDetails(){
 
 
   }
-//Jquery mouseover out
-function changeImage() {
-    document.getElementById("imagemov").style.outlineColor = "#00ff00";
-  
+//Jquery mouseover and mouse out to display the name of the films
+$(document).ready(function(){
+	$(".imgcontain").mouseover(function() {
+		$(this).children(".hoverdiv").show();
+	});
+	$(".imgcontain").mouseout(function() {
+		$(this).children(".hoverdiv").hide();
+	});
+});
 //-----------------------CONTACT US - VALIDATIONS  --------------------------
 
 
